@@ -1,4 +1,3 @@
-
 package com.gildedrose;
 
 import org.junit.jupiter.api.Test;
@@ -579,16 +578,6 @@ class GildedRoseTest {
         app.updateQuality();
         assertThat(app.items[0].quality, is(50));
     }
-    @Test
-    void SIPositiveNameAgedBrieQualityPositive2Lim50()
-    {
-        int ql = 49;
-        int si = 10;
-        Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertThat(app.items[0].quality, is(50));
-    }
 
     @Test
     void SINegativeNameBackstageQualityPositive2Lim50()
@@ -635,18 +624,6 @@ class GildedRoseTest {
         assertThat(app.items[0].quality, is(43));
     }
 
-    // On vérifie que lorsque la qualité est a 49 mais que le SI est a 10 ou moins,
-    // la qualité augmente bien de 1 et non de 2.
-    @Test
-    void SIPositiveNameBackstageQualityPositive2Lim50()
-    {
-        int ql = 49;
-        int si = 10;
-        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertThat(app.items[0].quality, is(50));
-    }
 
     // On vérifie que lorsque la qualité est a 48 mais que le SI est a 5 ou moins,
     // la qualité augmente bien de 2 et non de 3.
