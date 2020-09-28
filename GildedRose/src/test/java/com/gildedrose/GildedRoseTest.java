@@ -610,6 +610,132 @@ class GildedRoseTest {
         assertThat(app.items[0].quality, is(50));
     }
 
+    // On vérifie que la qualité augmente de 2 lorsqu'il reste 10 jours ou moins.
+    @Test
+    void SIPositiveNameBackstageQualityPositive2()
+    {
+        int ql = 40;
+        int si = 10;
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(42));
+    }
+
+    // On vérifie que la qualité augmente de 3 lorsqu'il reste 5 jours ou moins.
+    @Test
+    void SIPositiveNameBackstageQualityPositive3()
+    {
+        int ql = 40;
+        int si = 5;
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(43));
+    }
+
+    // On vérifie que lorsque la qualité est a 49 mais que le SI est a 10 ou moins,
+    // la qualité augmente bien de 1 et non de 2.
+    @Test
+    void SIPositiveNameBackstageQualityPositive2Lim50()
+    {
+        int ql = 49;
+        int si = 10;
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(50));
+    }
+
+    // On vérifie que lorsque la qualité est a 48 mais que le SI est a 5 ou moins,
+    // la qualité augmente bien de 2 et non de 3.
+    @Test
+    void SIPositiveNameBackstageQualityPositive3Lim50()
+    {
+        int ql = 48;
+        int si = 5;
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(50));
+    }
+    
+    // On vérifie que lorsque la qualité est a 49 mais que le SI est a 5 ou moins,
+    // la qualité augmente bien de 1 et non de 3.
+    @Test
+    void SIPositiveNameBackstageQualityPositive3Lim50_2()
+    {
+        int ql = 49;
+        int si = 5;
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(50));
+    }
+
+    // On vérifie que la qualité augmente de 2 lorsqu'il reste 10 jours ou moins.
+    @Test
+    void SIPositiveNameAgedBrieQualityPositive2()
+    {
+        int ql = 40;
+        int si = 10;
+        Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(41));
+    }
+
+    // On vérifie que la qualité augmente de 3 lorsqu'il reste 5 jours ou moins.
+    @Test
+    void SIPositiveNameAgedBrieQualityPositive3()
+    {
+        int ql = 40;
+        int si = 5;
+        Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(41));
+    }
+
+    // On vérifie que lorsque la qualité est a 49 mais que le SI est a 10 ou moins,
+    // la qualité augmente bien de 1 et non de 2.
+    @Test
+    void SIPositiveNameAgedBrieQualityPositive2Lim50()
+    {
+        int ql = 49;
+        int si = 10;
+        Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(50));
+    }
+
+    // On vérifie que lorsque la qualité est a 48 mais que le SI est a 5 ou moins,
+    // la qualité augmente bien de 2 et non de 3.
+    @Test
+    void SIPositiveNameAgedBrieQualityPositive3Lim50()
+    {
+        int ql = 48;
+        int si = 5;
+        Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(49));
+    }
+    
+    // On vérifie que lorsque la qualité est a 49 mais que le SI est a 5 ou moins,
+    // la qualité augmente bien de 1 et non de 3.
+    @Test
+    void SIPositiveNameAgedBrieQualityPositive3Lim50_2()
+    {
+        int ql = 49;
+        int si = 5;
+        Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(50));
+    }
+    
     
     //Elements "conjured"
     //A implementer par la suite
