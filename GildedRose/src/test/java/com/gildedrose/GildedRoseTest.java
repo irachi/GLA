@@ -613,7 +613,7 @@ class GildedRoseTest {
     //Elements "conjured"
     //A implementer par la suite
     //@Test
-    
+
     void SINegativeNameConjuredQualityPositive()
     {
         int ql = 49;
