@@ -95,7 +95,7 @@ class GildedRose
 
             if(items[i].name.toLowerCase().contains("conjured"))
             {
-                items[i].quality = items[i].quality/2;
+                items[i].quality = (items[i].quality)/2 + 1;
             }
         }
     }
