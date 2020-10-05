@@ -717,6 +717,7 @@ class GildedRoseTest {
     
     //Elements "conjured"
     //A implementer par la suite
+    @Test
     void SINegativeNameConjuredQualityPositive()
     {
         int ql = 49;
@@ -724,6 +725,6 @@ class GildedRoseTest {
         Item[] items = new Item[] { new Item("Conjured Mana cake", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(50));
+        assertThat(app.items[0].quality, is(ql/2));
     }
 }

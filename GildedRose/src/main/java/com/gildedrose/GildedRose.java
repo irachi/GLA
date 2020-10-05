@@ -8,8 +8,21 @@ class GildedRose
         this.items = items;
     }
 
-    public void updateQuality() {
-        for (int i = 0; i < items.length; i++) {
+    public void detectConjured()
+    {
+        for (int i = 0; i < items.length; i++) 
+        {
+            if(items[i].name.toLowerCase().contains("conjured"))
+            {
+                items[i].quality = items[i].quality/2;
+            }
+        }
+    }
+
+    public void updateQuality() 
+    {
+        for (int i = 0; i < items.length; i++) 
+        {
             if (!items[i].name.equals("Aged Brie")
                     && !items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) //Si le nom est différent des 2
             {
@@ -78,6 +91,11 @@ class GildedRose
                         items[i].quality = items[i].quality + 1;
                     }
                 }
+            }
+
+            if(items[i].name.toLowerCase().contains("conjured"))
+            {
+                items[i].quality = items[i].quality/2;
             }
         }
     }
