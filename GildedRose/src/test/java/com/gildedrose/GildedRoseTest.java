@@ -39,11 +39,11 @@ class GildedRoseTest {
     @Test
     void qualityNegativeOfAgedBrienameSIPositive() {
         int qu = -1;
-        int si = 5;
+        int si = 1;
         Item[] items = new Item[] { new Item("Aged Brie", si, qu) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(qu+1));
+        assertThat(app.items[0].quality, is(0));
     }
 
     @Test
@@ -58,12 +58,12 @@ class GildedRoseTest {
 
     @Test
     void qualityNegativeOfAgedBrienameSINegative() {
-        int qu = -1;
+        int qu = -16;
         int si = -5;
         Item[] items = new Item[] { new Item("Aged Brie", si, qu) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(qu+2));
+        assertThat(app.items[0].quality, is(0));
     }
 
     @Test
@@ -78,12 +78,12 @@ class GildedRoseTest {
 
     @Test
     void qualityNegativeOfBackstagepassestoaTAFKAL80ETCconcertnameSI1to5() {
-        int ql = -1;
+        int ql = -6;
         int si = 1;
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(ql+3));
+        assertThat(app.items[0].quality, is(0));
     }
 
 
@@ -99,12 +99,12 @@ class GildedRoseTest {
 
     @Test
     void qualityNegativeOfBackstagepassestoaTAFKAL80ETCconcertnameSI6to10() {
-        int ql = -1;
+        int ql = -7;
         int si = 10;
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(ql+2));
+        assertThat(app.items[0].quality, is(0));
     }
 
     @Test
@@ -120,7 +120,7 @@ class GildedRoseTest {
     @Test
     void qualityNegativeOfBackstagepassestoaTAFKAL80ETCconcertnameSINegative() {
         int ql = -1;
-        int si = -1;
+        int si = 0;
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -144,7 +144,7 @@ class GildedRoseTest {
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(ql+1));
+        assertThat(app.items[0].quality, is(0));
     }
 
     @Test
@@ -164,7 +164,7 @@ class GildedRoseTest {
         Item[] items = new Item[] { new Item("test", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(ql));
+        assertThat(app.items[0].quality, is(0));
     }
 
     @Test
@@ -184,7 +184,7 @@ class GildedRoseTest {
         Item[] items = new Item[] { new Item("test", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(ql));
+        assertThat(app.items[0].quality, is(0));
     }
 
     @Test
@@ -566,7 +566,11 @@ class GildedRoseTest {
         app.updateQuality();
         assertThat(app.items[0].sellIn, is(si));
     }
-    // On vérifie que lorsque la qualité est a 49 mais que le SI est a 10 ou moins,
+
+
+//Test sur la limitation de la qualité : toujours inférieure à 50
+
+    //"Backstage passes to a TAFKAL80ETC concert"
     // la qualité augmente bien de 1 et non de 2.
     @Test
     void SIPositiveNameBackstageQualityPositive2Lim50()
@@ -578,52 +582,6 @@ class GildedRoseTest {
         app.updateQuality();
         assertThat(app.items[0].quality, is(50));
     }
-
-    @Test
-    void SINegativeNameBackstageQualityPositive2Lim50()
-    {
-        int ql = 49;
-        int si = -10;
-        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertThat(app.items[0].quality, is(0));
-    }
-    @Test
-    void SINegativeNameAgedBrieQualityPositive2Lim50()
-    {
-        int ql = 49;
-        int si = -10;
-        Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertThat(app.items[0].quality, is(50));
-    }
-
-    // On vérifie que la qualité augmente de 2 lorsqu'il reste 10 jours ou moins.
-    @Test
-    void SIPositiveNameBackstageQualityPositive2()
-    {
-        int ql = 40;
-        int si = 10;
-        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertThat(app.items[0].quality, is(42));
-    }
-
-    // On vérifie que la qualité augmente de 3 lorsqu'il reste 5 jours ou moins.
-    @Test
-    void SIPositiveNameBackstageQualityPositive3()
-    {
-        int ql = 40;
-        int si = 5;
-        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertThat(app.items[0].quality, is(43));
-    }
-
 
     // On vérifie que lorsque la qualité est a 48 mais que le SI est a 5 ou moins,
     // la qualité augmente bien de 2 et non de 3.
@@ -651,31 +609,9 @@ class GildedRoseTest {
         assertThat(app.items[0].quality, is(50));
     }
 
-    // On vérifie que la qualité augmente de 2 lorsqu'il reste 10 jours ou moins.
-    @Test
-    void SIPositiveNameAgedBrieQualityPositive2()
-    {
-        int ql = 40;
-        int si = 10;
-        Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertThat(app.items[0].quality, is(41));
-    }
-
-    // On vérifie que la qualité augmente de 3 lorsqu'il reste 5 jours ou moins.
-    @Test
-    void SIPositiveNameAgedBrieQualityPositive3()
-    {
-        int ql = 40;
-        int si = 5;
-        Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertThat(app.items[0].quality, is(41));
-    }
 
     // On vérifie que lorsque la qualité est a 49 mais que le SI est a 10 ou moins,
+    //Aged Brie
     // la qualité augmente bien de 1 et non de 2.
     @Test
     void SIPositiveNameAgedBrieQualityPositive2Lim50()
@@ -689,7 +625,7 @@ class GildedRoseTest {
     }
 
     // On vérifie que lorsque la qualité est a 48 mais que le SI est a 5 ou moins,
-    // la qualité augmente bien de 2 et non de 3.
+    // la qualité augmente bien de 1 et non de 3.
     @Test
     void SIPositiveNameAgedBrieQualityPositive3Lim50()
     {
@@ -714,17 +650,60 @@ class GildedRoseTest {
         assertThat(app.items[0].quality, is(50));
     }
     
-    
-    //Elements "conjured"
-    //A implementer par la suite
     @Test
-    void SINegativeNameConjuredQualityPositive()
+    void SINegativeNameAgedBrieQualityPositive2Lim50()
     {
         int ql = 49;
+        int si = -10;
+        Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(50));
+    }
+    
+    //Elements "conjured"
+    
+    @Test
+    void SINegativeNameConjuredQualityPositiveUneven()
+    {
+        int ql = 27;
+        int si = 10;
+        Item[] items = new Item[] { new Item("Conjured Mana cake", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is((ql+1)/2));
+    }
+
+    @Test
+    void SINegativeNameConjuredQualityPositiveEven()
+    {
+        int ql = 48;
         int si = -10;
         Item[] items = new Item[] { new Item("Conjured Mana cake", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertThat(app.items[0].quality, is(ql/2));
+    }
+
+    @Test
+    void SINegativeNameConjuredQualityNegative()
+    {
+        int ql = -3;
+        int si = -10;
+        Item[] items = new Item[] { new Item("Conjured Mana cake", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(0));
+    }
+
+    @Test
+    void SIPositiveNameConjuredQualityNegative()
+    {
+        int ql = -3;
+        int si = 10;
+        Item[] items = new Item[] { new Item("Conjured Mana cake", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(0));
     }
 }

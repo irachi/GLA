@@ -1,71 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.gildedrose.GildedRoseTest" tests="65" skipped="0" failures="0" errors="0" timestamp="2020-10-05T16:33:33" hostname="MacBook-Air-de-Romain.local" time="0.126">
+<testsuite name="com.gildedrose.GildedRoseTest" tests="63" skipped="0" failures="1" errors="0" timestamp="2020-10-11T17:34:25" hostname="MacBook-Air-de-Romain.local" time="0.163">
   <properties/>
-  <testcase name="qualityPositiveOfAgedBrienameSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.021"/>
-  <testcase name="nameRandomQualityNegativeSINeg()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="nameRandomQualityNegativeSIPos()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="qualityPositiveOfAgedBrienameSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.035">
+    <failure message="java.lang.AssertionError: &#10;Expected: is &lt;4&gt;&#10;     but: was &lt;19&gt;" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expected: is &lt;4&gt;
+     but: was &lt;19&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at com.gildedrose.GildedRoseTest.qualityPositiveOfAgedBrienameSIPositive(GildedRoseTest.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:515)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:171)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:167)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:114)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:59)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:110)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:110)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:132)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:133)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</failure>
+  </testcase>
+  <testcase name="SINegativeNameConjuredQualityPositiveEven()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SINegativeNameConjuredQualityPositiveUneven()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="nameRandomQualityNegativeSINeg()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="nameRandomQualityNegativeSIPos()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="qualityPositiveOfAgedBrienameSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="SIPositiveNameAgedBrieQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="NameSulfurasQualityNegativeSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="SIPositiveNameAgedBrieQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="NameSulfurasQualityNegativeSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="NameSulfurasQualityPositiveSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SIPositiveNameAgedBrieQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="NameSulfurasQualityNegativeSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="NameSulfurasQualityPositiveSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="SIPositiveNameBackstageQualityPositive3Lim50_2()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="NamerandomQualityNegativeSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="NameSulfurasQualityPositiveSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="SIPositiveNameAgedBrieQualityPositive2Lim50()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="NamerandomQualityNegativeSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="NameSulfurasQualityPositiveSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SIPositiveNameAgedBrieQualityPositive2Lim50()" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
   <testcase name="SIPositiveNameAgedBrieQualityPositive3Lim50()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="NamerandomQualityNegativeSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="SINegativeNameConjuredQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="SIPositiveNamerandomQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="NamerandomQualityNegativeSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SIPositiveNamerandomQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="SINegativeNameAgedBrieQualityPositive2Lim50()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="NamerandomQualityPositiveSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="NamerandomQualityPositiveSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="SINegativeNameSulfurasQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="SIPositiveNamerandomQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="NamerandomQualityPositiveSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="SINegativeNameSulfurasQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="qualityNegativeOfBackstagepassestoaTAFKAL80ETCconcertnameSI6to10()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SINegativeNameConjuredQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SIPositiveNamerandomQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="NamerandomQualityPositiveSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SINegativeNameSulfurasQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="qualityNegativeOfBackstagepassestoaTAFKAL80ETCconcertnameSI6to10()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="qualityPositiveOfBackstagepassestoaTAFKAL80ETCconcertnameSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="SIPositiveNameAgedBrieQualityPositive3Lim50_2()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="NameBackstageQualityNegativeSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="SIPositiveNameBackstageQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SIPositiveNameAgedBrieQualityPositive3Lim50_2()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="NameBackstageQualityNegativeSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SIPositiveNameBackstageQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="SIPositiveNameBackstageQualityPositive2Lim50()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="SIPositiveNameBackstageQualityPositive3Lim50()" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
-  <testcase name="qualityPositiveOfBackstagepassestoaTAFKAL80ETCconcertnameSI6to10()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SIPositiveNameBackstageQualityPositive3Lim50()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="qualityPositiveOfBackstagepassestoaTAFKAL80ETCconcertnameSI6to10()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="NameBackstageQualityNegativeSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="SIPositiveNameBackstageQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="NameBackstageQualityPositiveSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="SIPositiveNameBackstageQualityPositive2()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="SIPositiveNameBackstageQualityPositive3()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="qualityNegativeOfBackstagepassestoaTAFKAL80ETCconcertnameSIaboveAndEgalto11()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="SINegativeNameBackstageQualityPositive2Lim50()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SIPositiveNameBackstageQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="NameBackstageQualityPositiveSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="qualityNegativeOfBackstagepassestoaTAFKAL80ETCconcertnameSIaboveAndEgalto11()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="NameBackstageQualityPositiveSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="nameSulfurasQualityNegativeSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.003"/>
+  <testcase name="nameSulfurasQualityNegativeSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="nameSulfurasQualityNegativeSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="SIPositiveNameSulfurasQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="nameSulfurasQualityPositiveSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="SIPositiveNameSulfurasQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="qualityNegativeOfBackstagepassestoaTAFKAL80ETCconcertnameSI1to5()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="nameSulfurasQualityPositiveSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SIPositiveNameConjuredQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="nameSulfurasQualityPositiveSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SIPositiveNameSulfurasQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="qualityNegativeOfBackstagepassestoaTAFKAL80ETCconcertnameSI1to5()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="nameSulfurasQualityPositiveSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="NameAgedBrieQualityNegativeSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="SINegativeNameBackstageQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="NameAgedBrieQualityNegativeSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="SINegativeNameAgedBrieQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SINegativeNameBackstageQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
+  <testcase name="NameAgedBrieQualityNegativeSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SINegativeNameAgedBrieQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="qualityPositiveOfBackstagepassestoaTAFKAL80ETCconcertnameSIaboveAndEgalto11()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="NameAgedBrieQualityPositiveSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="SINegativeNameBackstageQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="SIPositiveNameAgedBrieQualityPositive2()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="SIPositiveNameAgedBrieQualityPositive3()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="SINegativeNameAgedBrieQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="NameAgedBrieQualityPositiveSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="qualityNegativeOfAgedBrienameSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="nameRandomQualityPositiveSINeg()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="qualityNegativeOfAgedBrienameSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="nameRandomQualityPositiveSINeg()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="nameRandomQualityPositiveSIPos()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="qualityNegativeOfAgedBrienameSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="qualityPositiveOfBackstagepassestoaTAFKAL80ETCconcertnameSI1to5()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="qualityNegativeOfBackstagepassestoaTAFKAL80ETCconcertnameSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
-  <testcase name="SINegativeNamerandomQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="SINegativeNamerandomQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="qualityPositiveOfBackstagepassestoaTAFKAL80ETCconcertnameSI1to5()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="qualityNegativeOfBackstagepassestoaTAFKAL80ETCconcertnameSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SINegativeNamerandomQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SINegativeNamerandomQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
