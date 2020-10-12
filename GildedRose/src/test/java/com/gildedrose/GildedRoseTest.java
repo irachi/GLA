@@ -6,20 +6,6 @@ import static org.hamcrest.Matchers.*;
 
 class GildedRoseTest {
 
-    Item[] items = new Item[] 
-        {
-            new Item("+5 Dexterity Vest", 10, 20), //
-            new Item("Aged Brie", 2, 0), //
-            new Item("Elixir of the Mongoose", 5, 7), //
-            new Item("Sulfuras, Hand of Ragnaros", 0, 80), //
-            new Item("Sulfuras, Hand of Ragnaros", -1, 80),
-            new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-            new Item("Backstage passes to a TAFKAL80ETC concert", 10, 49),
-            new Item("Backstage passes to a TAFKAL80ETC concert", 5, 49),
-            // this conjured item does not work properly yet
-            new Item("Conjured Mana Cake", 3, 6) 
-        };
-
     // Tests unitaires sur la Qualité
     
     @Test
@@ -48,12 +34,12 @@ class GildedRoseTest {
 
     @Test
     void qualityPositiveOfAgedBrienameSINegative() {
-        int qu = 5;
+        int qu = 6;
         int si = -2;
         Item[] items = new Item[] { new Item("Aged Brie", si, qu) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(qu+2));
+        assertThat(app.items[0].quality, is(qu/2));
     }
 
     @Test
@@ -169,12 +155,12 @@ class GildedRoseTest {
 
     @Test
     void nameRandomQualityPositiveSINeg() {
-        int ql = 1;
+        int ql = 4;
         int si = -1;
         Item[] items = new Item[] { new Item("test", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(ql-1));
+        assertThat(app.items[0].quality, is(ql/2));
     }
 
     @Test
@@ -204,7 +190,7 @@ class GildedRoseTest {
         Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(ql));
+        assertThat(app.items[0].quality, is(0));
     } 
 
     @Test
@@ -224,7 +210,7 @@ class GildedRoseTest {
         Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(ql));
+        assertThat(app.items[0].quality, is(0));
     } 
 
     //Test unitaires sur le nom : Name
@@ -424,7 +410,7 @@ class GildedRoseTest {
         Item[] items = new Item[] { new Item("abc", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].sellIn, is(si-1));
+        assertThat(app.items[0].sellIn, is(0));
     }
 
     @Test
@@ -444,7 +430,7 @@ class GildedRoseTest {
         Item[] items = new Item[] { new Item("abc", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].sellIn, is(si-1));
+        assertThat(app.items[0].sellIn, is(0));
     }
 
     @Test
@@ -464,7 +450,7 @@ class GildedRoseTest {
         Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].sellIn, is(si-1));
+        assertThat(app.items[0].sellIn, is(0));
     }
 
     @Test
@@ -484,7 +470,7 @@ class GildedRoseTest {
         Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].sellIn, is(si-1));
+        assertThat(app.items[0].sellIn, is(0));
     }
 
     @Test
@@ -504,7 +490,7 @@ class GildedRoseTest {
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert ", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].sellIn, is(si-1));
+        assertThat(app.items[0].sellIn, is(0));
     }
 
     @Test
@@ -524,7 +510,7 @@ class GildedRoseTest {
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].sellIn, is(si-1));
+        assertThat(app.items[0].sellIn, is(0));
     }
 
     @Test
@@ -653,29 +639,18 @@ class GildedRoseTest {
     @Test
     void SINegativeNameAgedBrieQualityPositive2Lim50()
     {
-        int ql = 49;
+        int ql = 48;
         int si = -10;
         Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertThat(app.items[0].quality, is(50));
+        assertThat(app.items[0].quality, is(ql/2));
     }
     
     //Elements "conjured"
-    
-    @Test
-    void SINegativeNameConjuredQualityPositiveUneven()
-    {
-        int ql = 27;
-        int si = 10;
-        Item[] items = new Item[] { new Item("Conjured Mana cake", si, ql) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertThat(app.items[0].quality, is((ql+1)/2));
-    }
 
     @Test
-    void SINegativeNameConjuredQualityPositiveEven()
+    void QualityPositiveSINegativeNameConjured()
     {
         int ql = 48;
         int si = -10;
@@ -686,7 +661,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SINegativeNameConjuredQualityNegative()
+    void QualityNegativeSINegativeNameConjured()
     {
         int ql = -3;
         int si = -10;
@@ -697,7 +672,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SIPositiveNameConjuredQualityNegative()
+    void QualityNegativeSIPositiveNameConjured()
     {
         int ql = -3;
         int si = 10;
@@ -705,5 +680,60 @@ class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertThat(app.items[0].quality, is(0));
+    }
+
+    @Test
+    void QualityPositiveSIPositiveNameConjured()
+    {
+        int ql = 3;
+        int si = 10;
+        Item[] items = new Item[] { new Item("Conjured Mana cake", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].quality, is(ql/2));
+    }
+
+    @Test
+    void SINegativeNameConjuredQualityPositive()
+    {
+        int ql = 48;
+        int si = -10;
+        Item[] items = new Item[] { new Item("Conjured Mana cake", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].sellIn, is(0));
+    }
+
+    @Test
+    void SINegativeNameConjuredQualityNegative()
+    {
+        int ql = -3;
+        int si = -10;
+        Item[] items = new Item[] { new Item("Conjured Mana cake", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].sellIn, is(0));
+    }
+
+    @Test
+    void SIPositiveNameConjuredQualityNegative()
+    {
+        int ql = -3;
+        int si = 10;
+        Item[] items = new Item[] { new Item("Conjured Mana cake", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].sellIn, is(si-1));
+    }
+
+    @Test
+    void SIPositiveNameConjuredQualityPositive()
+    {
+        int ql = 3;
+        int si = 10;
+        Item[] items = new Item[] { new Item("Conjured Mana cake", si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].sellIn, is(si-1));
     }
 }
