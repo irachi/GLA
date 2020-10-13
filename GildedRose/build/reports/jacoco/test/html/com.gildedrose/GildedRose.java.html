@@ -11,95 +11,103 @@ class GildedRose {
 //Element conjuré
 
   void qualityofConjuredObject(int i) {
-<span class="fc bfc" id="L14" title="All 2 branches covered.">    if (items[i].name.toLowerCase(Locale.FRANCE).contains(&quot;conjured&quot;)) {</span>
-<span class="fc bfc" id="L15" title="All 2 branches covered.">      if (items[i].quality &gt; 0) {</span>
-<span class="fc" id="L16">        items[i].quality = (items[i].quality) / 2;</span>
-      } else {
-<span class="fc" id="L18">        items[i].quality = 0;</span>
-      }
+<span class="fc bfc" id="L14" title="All 2 branches covered.">    if (items[i].quality &gt; 0) {</span>
+<span class="fc" id="L15">    items[i].quality = (items[i].quality) / 2;</span>
+    } else {
+<span class="fc" id="L17">    items[i].quality = 0;</span>
     }
-<span class="fc" id="L21">  }</span>
+<span class="fc" id="L19">  }</span>
 
   //Controle de la qualité (entre 0 et 50)
 
   public void qualityControl(int i) {
-<span class="fc bfc" id="L26" title="All 2 branches covered.">    if (items[i].quality &lt; minQuality) {</span>
-<span class="fc" id="L27">      items[i].quality = minQuality;</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">    if (items[i].quality &lt; minQuality) {</span>
+<span class="fc" id="L25">      items[i].quality = minQuality;</span>
     }
-<span class="fc bfc" id="L29" title="All 2 branches covered.">    if (!items[i].name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
-<span class="fc bfc" id="L30" title="All 2 branches covered.">      if (items[i].quality &gt; maxQuality) {</span>
-<span class="fc" id="L31">        items[i].quality = maxQuality;</span>
+<span class="fc bfc" id="L27" title="All 2 branches covered.">    if (!items[i].name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">      if (items[i].quality &gt; maxQuality) {</span>
+<span class="fc" id="L29">        items[i].quality = maxQuality;</span>
       }
     }
-<span class="fc" id="L34">  }</span>
+<span class="fc" id="L32">  }</span>
 
   public void sellInControl(int i) {
-<span class="fc bfc" id="L37" title="All 2 branches covered.">    if (items[i].sellIn &lt; 0) {</span>
-<span class="fc" id="L38">      items[i].sellIn = 0;</span>
-<span class="fc" id="L39">      items[i].quality = (items[i].quality) / 2;</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">    if (items[i].sellIn &lt; 0) {</span>
+<span class="fc" id="L36">      items[i].sellIn = 0;</span>
+<span class="fc" id="L37">      items[i].quality = (items[i].quality) / 2;</span>
     }
-<span class="fc" id="L41">  }</span>
+<span class="fc" id="L39">  }</span>
   //sellIn des objets :
 
   public void sellInofObject(int i) {
-<span class="fc bfc" id="L45" title="All 2 branches covered.">    if (!items[i].name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
-<span class="fc" id="L46">      items[i].sellIn = (items[i].sellIn) - 1;</span>
-<span class="fc" id="L47">      sellInControl(i);</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">    if (!items[i].name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
+<span class="fc" id="L44">      items[i].sellIn = (items[i].sellIn) - 1;</span>
+<span class="fc" id="L45">      sellInControl(i);</span>
     }
-<span class="fc" id="L49">  }</span>
+<span class="fc" id="L47">  }</span>
 
   //Random object
 
   public void qualityofRandomObject(int i) {
-<span class="fc bfc" id="L54" title="All 2 branches covered.">    if (!items[i].name.equals(&quot;Aged Brie&quot;)</span>
-<span class="fc bfc" id="L55" title="All 2 branches covered.">      &amp;&amp; !items[i].name.toLowerCase(Locale.FRANCE).contains(&quot;conjured&quot;)</span>
-<span class="fc bfc" id="L56" title="All 2 branches covered.">      &amp;&amp; !items[i].name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)</span>
-<span class="fc bfc" id="L57" title="All 2 branches covered.">      &amp;&amp; !items[i].name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
-<span class="fc bfc" id="L58" title="All 2 branches covered.">      if (items[i].quality &gt; 0) {</span>
-<span class="fc" id="L59">        items[i].quality = (items[i].quality) - 1;</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">    if (!items[i].name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {  </span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">      if (items[i].quality &gt; 0) {</span>
+<span class="fc" id="L54">        items[i].quality = (items[i].quality) - 1;</span>
       }
     }
-<span class="fc" id="L62">  }</span>
+<span class="fc" id="L57">  }</span>
 
   //&quot;Aged Brie&quot; object
 
   public void qualityofAgedBrieObject(int i) {
-<span class="fc bfc" id="L67" title="All 2 branches covered.">    if (items[i].name.equals(&quot;Aged Brie&quot;)) {</span>
-<span class="fc" id="L68">      items[i].quality = (items[i].quality) + 1;</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">    if(items[i].sellIn &gt; 0) {</span>
+<span class="fc" id="L63">      items[i].quality = (items[i].quality) + 1;</span>
     }
-<span class="fc" id="L70">  }</span>
+<span class="fc" id="L65">  }</span>
 
   //&quot;Backstage passes to a TAFKAL80ETC concert&quot; object
 
   public void qualityofBACKObject(int i) {
-<span class="fc bfc" id="L75" title="All 2 branches covered.">    if (items[i].name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)) {</span>
-<span class="fc bfc" id="L76" title="All 2 branches covered.">      if (items[i].sellIn &gt; 10) {</span>
-<span class="fc" id="L77">        items[i].quality = (items[i].quality) + 1;</span>
+<span class="fc bfc" id="L70" title="All 2 branches covered.">      if (items[i].sellIn &gt; 10) {</span>
+<span class="fc" id="L71">        items[i].quality = (items[i].quality) + 1;</span>
       }
-<span class="fc bfc" id="L79" title="All 4 branches covered.">      if (items[i].sellIn &gt;= 6 &amp;&amp; items[i].sellIn &lt;= 10) {</span>
-<span class="fc" id="L80">        items[i].quality = (items[i].quality) + 2;</span>
+<span class="fc bfc" id="L73" title="All 4 branches covered.">      if (items[i].sellIn &gt;= 6 &amp;&amp; items[i].sellIn &lt;= 10) {</span>
+<span class="fc" id="L74">        items[i].quality = (items[i].quality) + 2;</span>
       }
-<span class="fc bfc" id="L82" title="All 4 branches covered.">      if (items[i].sellIn &gt;= 1 &amp;&amp; items[i].sellIn &lt;= 5) {</span>
-<span class="fc" id="L83">        items[i].quality = (items[i].quality) + 3;</span>
+<span class="fc bfc" id="L76" title="All 4 branches covered.">      if (items[i].sellIn &gt;= 1 &amp;&amp; items[i].sellIn &lt;= 5) {</span>
+<span class="fc" id="L77">        items[i].quality = (items[i].quality) + 3;</span>
       }
-<span class="fc bfc" id="L85" title="All 2 branches covered.">      if (items[i].sellIn &lt;= 0) {</span>
-<span class="fc" id="L86">        items[i].quality = 0;</span>
+<span class="fc bfc" id="L79" title="All 2 branches covered.">      if (items[i].sellIn &lt;= 0) {</span>
+<span class="fc" id="L80">        items[i].quality = 0;</span>
       }
-    }
-<span class="fc" id="L89">  }</span>
+    
+<span class="fc" id="L83">  }</span>
   //&quot;Sulfuras, Hand of Ragnaros&quot; object ne bouge pas en qualité et jours restants
 
   public void updateQuality() {
-<span class="fc bfc" id="L93" title="All 2 branches covered.">    for (int i = 0; i &lt; items.length; i++) {</span>
-<span class="fc bfc" id="L94" title="All 2 branches covered.">      if (items[i].sellIn &gt; 0) {</span>
-<span class="fc" id="L95">        qualityofRandomObject(i);</span>
-<span class="fc" id="L96">        qualityofAgedBrieObject(i);</span>
-<span class="fc" id="L97">        qualityofConjuredObject(i);</span>
-      }
-<span class="fc" id="L99">      qualityofBACKObject(i);</span>
-<span class="fc" id="L100">      sellInofObject(i);</span>
-<span class="fc" id="L101">      qualityControl(i);</span>
+<span class="fc bfc" id="L87" title="All 2 branches covered.">    for (int i = 0; i &lt; items.length; i++) {</span>
+<span class="fc bfc" id="L88" title="All 3 branches covered.">        switch (items[i].name) {</span>
+            case &quot;Aged Brie&quot;:
+<span class="fc" id="L90">            qualityofAgedBrieObject(i);</span>
+<span class="fc" id="L91">            break;</span>
+                
+            case &quot;Backstage passes to a TAFKAL80ETC concert&quot;:
+<span class="fc" id="L94">            qualityofBACKObject(i);</span>
+<span class="fc" id="L95">            break;</span>
+
+            default:
+<span class="fc bfc" id="L98" title="All 2 branches covered.">            if(items[i].sellIn &gt; 0) {</span>
+<span class="fc bfc" id="L99" title="All 2 branches covered.">              if (items[i].name.toLowerCase(Locale.FRANCE).contains(&quot;conjured&quot;)) {</span>
+<span class="fc" id="L100">                qualityofConjuredObject(i);    </span>
+              } else {
+<span class="fc" id="L102">                qualityofRandomObject(i);</span>
+              }
+              break;
+            }
+        }
+<span class="fc" id="L107">      sellInofObject(i);</span>
+<span class="fc" id="L108">      qualityControl(i);</span>
+        
     }
-<span class="fc" id="L103">  }</span>
+<span class="fc" id="L111">  }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
