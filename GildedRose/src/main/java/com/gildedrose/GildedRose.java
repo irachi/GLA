@@ -2,31 +2,29 @@ package com.gildedrose;
 import java.util.Locale;
 
 class GildedRose {
-  static int minQuality;
-  static int maxQuality = 50;
+  static int MINQUALITY;
+  static int MAXQUALITY = 50;
+  String sulfuras = "Sulfuras, Hand of Ragnaros" ;
   Item[] items;
   GildedRose(Item[] items) {
     this.items = items;
   }
-//Element conjuré
 
   void qualityofConjuredObject(int i) {
     if (items[i].quality > 0) {
-    items[i].quality = (items[i].quality) / 2;
+      items[i].quality = (items[i].quality) / 2;
     } else {
-    items[i].quality = 0;
+      items[i].quality = 0;
     }
   }
 
-  //Controle de la qualité (entre 0 et 50)
-
   public void qualityControl(int i) {
-    if (items[i].quality < minQuality) {
-      items[i].quality = minQuality;
+    if (items[i].quality < MINQUALITY) {
+      items[i].quality = MINQUALITY;
     }
-    if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
-      if (items[i].quality > maxQuality) {
-        items[i].quality = maxQuality;
+    if (!items[i].name.equals(sulfuras)) {
+      if (items[i].quality > MAXQUALITY) {
+        items[i].quality = MAXQUALITY;
       }
     }
   }
@@ -34,37 +32,34 @@ class GildedRose {
   public void sellInControl(int i) {
     if (items[i].sellIn < 0) {
       items[i].sellIn = 0;
-      items[i].quality = (items[i].quality) / 2;
+      downQuality(i);
     }
   }
-  //sellIn des objets :
 
-  public void sellInofObject(int i) {
-    if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
+  public void downQuality(int i){
+    items[i].quality = (items[i].quality) / 2;
+  }
+
+  public void updateSellInofObject(int i) {
+    if (!items[i].name.equals(sulfuras)) {
       items[i].sellIn = (items[i].sellIn) - 1;
       sellInControl(i);
     }
   }
 
-  //Random object
-
-  public void qualityofRandomObject(int i) {
-    if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {  
+  public void upQualityofRandomObject(int i) {
+    if (!items[i].name.equals(sulfuras)) {  
       if (items[i].quality > 0) {
         items[i].quality = (items[i].quality) - 1;
       }
     }
   }
 
-  //"Aged Brie" object
-
-  public void qualityofAgedBrieObject(int i) {
+  public void upQualityofAgedBrieObject(int i) {
     if(items[i].sellIn > 0) {
       items[i].quality = (items[i].quality) + 1;
     }
   }
-
-  //"Backstage passes to a TAFKAL80ETC concert" object
 
   public void qualityofBACKObject(int i) {
       if (items[i].sellIn > 10) {
@@ -81,13 +76,12 @@ class GildedRose {
       }
     
   }
-  //"Sulfuras, Hand of Ragnaros" object ne bouge pas en qualité et jours restants
 
   public void updateQuality() {
     for (int i = 0; i < items.length; i++) {
         switch (items[i].name) {
             case "Aged Brie":
-            qualityofAgedBrieObject(i);
+            upQualityofAgedBrieObject(i);
             break;
                 
             case "Backstage passes to a TAFKAL80ETC concert":
@@ -99,12 +93,12 @@ class GildedRose {
               if (items[i].name.toLowerCase(Locale.FRANCE).contains("conjured")) {
                 qualityofConjuredObject(i);    
               } else {
-                qualityofRandomObject(i);
+                upQualityofRandomObject(i);
               }
               break;
             }
         }
-      sellInofObject(i);
+      updateSellInofObject(i);
       qualityControl(i);
         
     }
