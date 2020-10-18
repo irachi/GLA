@@ -2,7 +2,7 @@
 <pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
-    version="6.23.0" timestamp="2020-10-12T21:11:59.758">
+    version="6.23.0" timestamp="2020-10-18T14:41:43.844">
 <file name="/Users/romain/Desktop/Cours/M1/Génie logiciel avancé/TP/GLA/GildedRose/src/test/java/com/gildedrose/GildedRoseTest.java">
 <violation beginline="16" endline="16" begincolumn="46" endcolumn="56" rule="AvoidDuplicateLiterals" ruleset="Error Prone" package="com.gildedrose" class="GildedRoseTest" method="qualityPositiveOfAgedBrienameSIPositive" externalInfoUrl="https://pmd.github.io/pmd-6.23.0/pmd_rules_java_errorprone.html#avoidduplicateliterals" priority="3">
 The String literal &quot;Aged Brie&quot; appears 16 times in this file; the first occurrence is on line 16
@@ -24,11 +24,11 @@ The String literal &quot;Conjured Mana cake&quot; appears 8 times in this file; 
 </violation>
 </file>
 <file name="/Users/romain/Desktop/Cours/M1/Génie logiciel avancé/TP/GLA/GildedRose/src/test/java/com/gildedrose/TexttestFixture.java">
-<violation beginline="19" endline="35" begincolumn="21" endcolumn="47" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.gildedrose" class="TexttestFixture" method="main" variable="app" externalInfoUrl="https://pmd.github.io/pmd-6.23.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DU'-anomaly for variable 'app' (lines '19'-'35').
+<violation beginline="21" endline="37" begincolumn="21" endcolumn="47" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.gildedrose" class="TexttestFixture" method="main" variable="app" externalInfoUrl="https://pmd.github.io/pmd-6.23.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'app' (lines '21'-'37').
 </violation>
-<violation beginline="21" endline="23" begincolumn="14" endcolumn="49" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.gildedrose" class="TexttestFixture" method="main" variable="days" externalInfoUrl="https://pmd.github.io/pmd-6.23.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
-Found 'DD'-anomaly for variable 'days' (lines '21'-'23').
+<violation beginline="23" endline="25" begincolumn="14" endcolumn="49" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="com.gildedrose" class="TexttestFixture" method="main" variable="days" externalInfoUrl="https://pmd.github.io/pmd-6.23.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'days' (lines '23'-'25').
 </violation>
 </file>
 </pmd>
