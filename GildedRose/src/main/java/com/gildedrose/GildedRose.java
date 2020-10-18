@@ -1,3 +1,4 @@
+
 package com.gildedrose;
 import java.util.Locale;
 
