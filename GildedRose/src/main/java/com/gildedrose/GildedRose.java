@@ -1,4 +1,3 @@
-
 package com.gildedrose;
 import java.util.Locale;
 
@@ -6,7 +5,7 @@ class GildedRose {
   static int MINQUALITY;
   static int MAXQUALITY = 50;
   static String sulfuras = "Sulfuras, Hand of Ragnaros";
-  static int tenDaysOrBelow = 10; 
+  static int tenDaysOrBelow = 10;
   Item[] items;
   GildedRose(Item[] items) {
     this.items = items;

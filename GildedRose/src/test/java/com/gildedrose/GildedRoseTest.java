@@ -134,7 +134,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void nameRandomQualityPositiveSIPos() {
+    void qualityPositiveNameRandomSIPos() {
         int ql = 1;
         int si = 1;
         Item[] items = new Item[] { new Item("test", si, ql) };
@@ -144,7 +144,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void nameRandomQualityNegativeSIPos() {
+    void qualityNegativeNameRandomSIPos() {
         int ql = -1;
         int si = 1;
         Item[] items = new Item[] { new Item("test", si, ql) };
@@ -154,7 +154,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void nameRandomQualityPositiveSINeg() {
+    void qualityPositiveNameRandomSINeg() {
         int ql = 4;
         int si = -1;
         Item[] items = new Item[] { new Item("test", si, ql) };
@@ -164,7 +164,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void nameRandomQualityNegativeSINeg() {
+    void qualityNegativeNameRandomSINeg() {
         int ql = -1;
         int si = -1;
         Item[] items = new Item[] { new Item("test", si, ql) };
@@ -174,7 +174,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void nameSulfurasQualityPositiveSIPositive() {
+    void qualityPositiveNameSulfurasSIPos() {
         int ql = 5;
         int si = 5;
         Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", si, ql) };
@@ -184,7 +184,7 @@ class GildedRoseTest {
     }
     
     @Test
-    void nameSulfurasQualityNegativeSIPositive() {
+    void qualityNegativeNameSulfurasSIPos() {
         int ql = -1;
         int si = 5;
         Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", si, ql) };
@@ -194,7 +194,7 @@ class GildedRoseTest {
     } 
 
     @Test
-    void nameSulfurasQualityPositiveSINegative() {
+    void qualityPositiveNameSulfurasSINeg() {
         int ql = 5;
         int si = -5;
         Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", si, ql) };
@@ -204,7 +204,7 @@ class GildedRoseTest {
     }
     
     @Test
-    void nameSulfurasQualityNegativeSINegative() {
+    void qualityNegativeNameSulfurasSINeg() {
         int ql = -1;
         int si = -5;
         Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", si, ql) };
@@ -216,7 +216,7 @@ class GildedRoseTest {
     //Test unitaires sur le nom : Name
 
     @Test
-    void NamerandomQualityPositiveSIPositive() {
+    void nameRandomQualityPositiveSIPos() {
         int ql = 1;
         int si = 5;
         String n = "abc";
@@ -227,7 +227,7 @@ class GildedRoseTest {
     } 
 
     @Test
-    void NamerandomQualityPositiveSINegative() {
+    void nameRandomQualityPositiveSINeg() {
         int ql = 1;
         int si = -5;
         String n = "abc";
@@ -238,7 +238,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void NamerandomQualityNegativeSIPositive() {
+    void nameRandomQualityNegativeSIPos() {
         int ql = -1;
         int si = 5;
         String n = "abc";
@@ -249,7 +249,7 @@ class GildedRoseTest {
     } 
 
     @Test
-    void NamerandomQualityNegativeSINegative() {
+    void nameRandomQualityNegativeSINeg() {
         int ql = 1;
         int si = -5;
         String n = "abc";
@@ -260,7 +260,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void NameAgedBrieQualityPositiveSIPositive() {
+    void nameAgedBrieQualityPositiveSIPos() {
         int ql = 1;
         int si = 5;
         String n = "Aged Brie";
@@ -271,7 +271,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void NameAgedBrieQualityPositiveSINegative() {
+    void nameAgedBrieQualityPositiveSINeg() {
         int ql = 1;
         int si = -5;
         String n = "Aged Brie";
@@ -282,7 +282,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void NameAgedBrieQualityNegativeSIPositive() {
+    void nameAgedBrieQualityNegativeSIPos() {
         int ql = -1;
         int si = 5;
         String n = "Aged Brie";
@@ -293,7 +293,7 @@ class GildedRoseTest {
     } 
 
     @Test
-    void NameAgedBrieQualityNegativeSINegative() {
+    void nameAgedBrieQualityNegativeSINeg() {
         int ql = -1;
         int si = -5;
         String n = "Aged Brie";
@@ -304,7 +304,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void NameBackstageQualityPositiveSIPositive() {
+    void nameBackstageQualityPositiveSIPos() {
         int ql = 1;
         int si = 5;
         String n = "Backstage passes to a TAFKAL80ETC concert";
@@ -315,7 +315,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void NameBackstageQualityPositiveSINegative() {
+    void nameBackstageQualityPositiveSINeg() {
         int ql = 1;
         int si = -5;
         String n = "Backstage passes to a TAFKAL80ETC concert";
@@ -326,7 +326,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void NameBackstageQualityNegativeSIPositive() {
+    void nameBackstageQualityNegativeSIPos() {
         int ql = -1;
         int si = 5;
         String n = "Backstage passes to a TAFKAL80ETC concert";
@@ -337,7 +337,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void NameBackstageQualityNegativeSINegative() {
+    void nameBackstageQualityNegativeSINeg() {
         int ql = -1;
         int si = -5;
         String n = "Backstage passes to a TAFKAL80ETC concert";
@@ -348,7 +348,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void NameSulfurasQualityPositiveSIPositive() {
+    void nameSulfurasQualityPositiveSIPos() {
         int ql = 1;
         int si = 5;
         String n = "Sulfuras, Hand of Ragnaros";
@@ -359,7 +359,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void NameSulfurasQualityPositiveSINegative() {
+    void nameSulfurasQualityPositiveSINeg() {
         int ql = 1;
         int si = -5;
         String n = "Sulfuras, Hand of Ragnaros";
@@ -370,7 +370,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void NameSulfurasQualityNegativeSIPositive() {
+    void nameSulfurasQualityNegativeSIPos() {
         int ql = -1;
         int si = 5;
         String n = "Sulfuras, Hand of Ragnaros";
@@ -381,7 +381,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void NameSulfurasQualityNegativeSINegative() {
+    void nameSulfurasQualityNegativeSINeg() {
         int ql = -1;
         int si = -5;
         String n = "Sulfuras, Hand of Ragnaros";
@@ -392,9 +392,8 @@ class GildedRoseTest {
     }
 
     //Test unitaires sur les jours restants : SellIn
-
     @Test
-    void SIPositiveNamerandomQualityPositive() {
+    void siPositiveNamerandomQualityPos() {
         int ql = 1;
         int si = 5;
         Item[] items = new Item[] { new Item("abc", si, ql) };
@@ -404,7 +403,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SINegativeNamerandomQualityPositive() {
+    void siNegativeNamerandomQualityPos() {
         int ql = 1;
         int si = -5;
         Item[] items = new Item[] { new Item("abc", si, ql) };
@@ -414,7 +413,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SIPositiveNamerandomQualityNegative() {
+    void siPositiveNamerandomQualityNeg() {
         int ql = -1;
         int si = 5;
         Item[] items = new Item[] { new Item("abc", si, ql) };
@@ -424,7 +423,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SINegativeNamerandomQualityNegative() {
+    void siNegativeNamerandomQualityNeg() {
         int ql = 1;
         int si = -5;
         Item[] items = new Item[] { new Item("abc", si, ql) };
@@ -434,7 +433,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SIPositiveNameAgedBrieQualityPositive() {
+    void siPositiveNameAgedBrieQualityPos() {
         int ql = 1;
         int si = 5;
         Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
@@ -444,7 +443,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SINegativeNameAgedBrieQualityPositive() {
+    void siNegativeNameAgedBrieQualityPos() {
         int ql = 1;
         int si = -5;
         Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
@@ -454,7 +453,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SIPositiveNameAgedBrieQualityNegative() {
+    void siPositiveNameAgedBrieQualityNeg() {
         int ql = -1;
         int si = 5;
         Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
@@ -464,7 +463,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SINegativeNameAgedBrieQualityNegative() {
+    void siNegativeNameAgedBrieQualityNeg() {
         int ql = -1;
         int si = -5;
         Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
@@ -474,7 +473,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SIPositiveNameBackstageQualityPositive() {
+    void siPositiveNameBackstageQualityPos() {
         int ql = 1;
         int si = 5;
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
@@ -484,7 +483,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SINegativeNameBackstageQualityPositive() {
+    void siNegativeNameBackstageQualityPos() {
         int ql = 1;
         int si = -5;
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert ", si, ql) };
@@ -494,7 +493,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SIPositiveNameBackstageQualityNegative() {
+    void siPositiveNameBackstageQualityNeg() {
         int ql = -1;
         int si = 5;
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
@@ -504,7 +503,7 @@ class GildedRoseTest {
     } 
 
     @Test
-    void SINegativeNameBackstageQualityNegative() {
+    void siNegativeNameBackstageQualityNeg() {
         int ql = -1;
         int si = -5;
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
@@ -514,7 +513,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SIPositiveNameSulfurasQualityPositive() {
+    void siPositiveNameSulfurasQualityPos() {
         int ql = 1;
         int si = 5;
         Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", si, ql) };
@@ -524,7 +523,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SINegativeNameSulfurasQualityPositive() {
+    void siNegativeNameSulfurasQualityPos() {
         int ql = 1;
         int si = -5;
         Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", si, ql) };
@@ -534,7 +533,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SIPositiveNameSulfurasQualityNegative() {
+    void siPositiveNameSulfurasQualityNeg() {
         int ql = -1;
         int si = 5;
         Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", si, ql) };
@@ -544,7 +543,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SINegativeNameSulfurasQualityNegative() {
+    void siNegativeNameSulfurasQualityNeg() {
         int ql = -1;
         int si = -5;
         Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", si, ql) };
@@ -555,11 +554,9 @@ class GildedRoseTest {
 
 
 //Test sur la limitation de la qualité : toujours inférieure à 50
-
-    //"Backstage passes to a TAFKAL80ETC concert"
-    // la qualité augmente bien de 1 et non de 2.
+// Backstage passes to a TAFKAL80ETC concert
     @Test
-    void SIPositiveNameBackstageQualityPositive2Lim50()
+    void qualityPositive2Lim50NameBackstageSIPos()
     {
         int ql = 49;
         int si = 10;
@@ -569,10 +566,8 @@ class GildedRoseTest {
         assertThat(app.items[0].quality, is(50));
     }
 
-    // On vérifie que lorsque la qualité est a 48 mais que le SI est a 5 ou moins,
-    // la qualité augmente bien de 2 et non de 3.
     @Test
-    void SIPositiveNameBackstageQualityPositive3Lim50()
+    void qualityPositive3Lim50NameBackstageSIPos()
     {
         int ql = 48;
         int si = 5;
@@ -582,25 +577,10 @@ class GildedRoseTest {
         assertThat(app.items[0].quality, is(50));
     }
     
-    // On vérifie que lorsque la qualité est a 49 mais que le SI est a 5 ou moins,
-    // la qualité augmente bien de 1 et non de 3.
-    @Test
-    void SIPositiveNameBackstageQualityPositive3Lim50_2()
-    {
-        int ql = 49;
-        int si = 5;
-        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", si, ql) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertThat(app.items[0].quality, is(50));
-    }
-
-
-    // On vérifie que lorsque la qualité est a 49 mais que le SI est a 10 ou moins,
     //Aged Brie
-    // la qualité augmente bien de 1 et non de 2.
+
     @Test
-    void SIPositiveNameAgedBrieQualityPositive2Lim50()
+    void qualityPositive2Lim50NameAgedBrieSIPos()
     {
         int ql = 49;
         int si = 10;
@@ -610,10 +590,9 @@ class GildedRoseTest {
         assertThat(app.items[0].quality, is(50));
     }
 
-    // On vérifie que lorsque la qualité est a 48 mais que le SI est a 5 ou moins,
-    // la qualité augmente bien de 1 et non de 3.
+
     @Test
-    void SIPositiveNameAgedBrieQualityPositive3Lim50()
+    void qualityPositive3Lim50NameAgedBrieSIPos()
     {
         int ql = 48;
         int si = 5;
@@ -623,34 +602,10 @@ class GildedRoseTest {
         assertThat(app.items[0].quality, is(49));
     }
     
-    // On vérifie que lorsque la qualité est a 49 mais que le SI est a 5 ou moins,
-    // la qualité augmente bien de 1 et non de 3.
-    @Test
-    void SIPositiveNameAgedBrieQualityPositive3Lim50_2()
-    {
-        int ql = 49;
-        int si = 5;
-        Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertThat(app.items[0].quality, is(50));
-    }
-    
-    @Test
-    void SINegativeNameAgedBrieQualityPositive2Lim50()
-    {
-        int ql = 48;
-        int si = -10;
-        Item[] items = new Item[] { new Item("Aged Brie", si, ql) };
-        GildedRose app = new GildedRose(items);
-        app.updateQuality();
-        assertThat(app.items[0].quality, is(ql/2));
-    }
-    
     //Elements "conjured"
 
     @Test
-    void QualityPositiveSINegativeNameConjured()
+    void qualityPositiveSINegativeNameConjured()
     {
         int ql = 48;
         int si = -10;
@@ -661,7 +616,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void QualityNegativeSINegativeNameConjured()
+    void qualityNegativeSINegativeNameConjured()
     {
         int ql = -3;
         int si = -10;
@@ -672,7 +627,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void QualityNegativeSIPositiveNameConjured()
+    void qualityNegativeSIPositiveNameConjured()
     {
         int ql = -3;
         int si = 10;
@@ -683,7 +638,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void QualityPositiveSIPositiveNameConjured()
+    void qualityPositiveSIPositiveNameConjured()
     {
         int ql = 3;
         int si = 10;
@@ -694,7 +649,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SINegativeNameConjuredQualityPositive()
+    void siNegativeNameConjuredQualityPos()
     {
         int ql = 48;
         int si = -10;
@@ -705,7 +660,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SINegativeNameConjuredQualityNegative()
+    void siNegativeNameConjuredQualityNeg()
     {
         int ql = -3;
         int si = -10;
@@ -716,7 +671,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SIPositiveNameConjuredQualityNegative()
+    void siPositiveNameConjuredQualityNeg()
     {
         int ql = -3;
         int si = 10;
@@ -727,7 +682,7 @@ class GildedRoseTest {
     }
 
     @Test
-    void SIPositiveNameConjuredQualityPositive()
+    void siPositiveNameConjuredQualityPos()
     {
         int ql = 3;
         int si = 10;
@@ -736,4 +691,50 @@ class GildedRoseTest {
         app.updateQuality();
         assertThat(app.items[0].sellIn, is(si-1));
     }
+
+    @Test
+    void nameCojuredQualityPositiveSIPos() {
+        int ql = 1;
+        int si = 5;
+        String n = "Conjured mana Cake";
+        Item[] items = new Item[] { new Item(n, si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].name, is(n));
+    }
+
+    @Test
+    void nameCojuredQualityNegativeSIPos() {
+        int ql = -2;
+        int si = 6;
+        String n = "Conjured mana Cake";
+        Item[] items = new Item[] { new Item(n, si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].name, is(n));
+    }
+
+    @Test
+    void nameCojuredQualityPositiveSINeg() {
+        int ql = 13;
+        int si = -9;
+        String n = "Conjured mana Cake";
+        Item[] items = new Item[] { new Item(n, si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].name, is(n));
+    }
+
+    @Test
+    void nameCojuredQualityNegativeSINeg() {
+        int ql = -1;
+        int si = -5;
+        String n = "Conjured mana Cake";
+        Item[] items = new Item[] { new Item(n, si, ql) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertThat(app.items[0].name, is(n));
+    }
+
+    
 }
