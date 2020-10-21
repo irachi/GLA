@@ -1,5 +1,9 @@
 package com.gildedrose;
 import java.util.Locale;
+/**
+ * @author ALI Irachi REMY Romain
+ * @version 1.0
+ */
 
 class GildedRose {
   static int MINQUALITY;
@@ -10,7 +14,9 @@ class GildedRose {
   GildedRose(Item[] items) {
     this.items = items;
   }
-
+  /**
+   * @param i
+   */
   void qualityofConjuredObject(int i) {
     if (items[i].quality > 0) {
       items[i].quality = (items[i].quality) / 2;
@@ -18,7 +24,9 @@ class GildedRose {
       items[i].quality = 0;
     }
   }
-
+  /**
+   * @param i
+   */
   public void qualityControl(int i) {
     if (items[i].quality < MINQUALITY) {
       items[i].quality = MINQUALITY;
@@ -29,24 +37,33 @@ class GildedRose {
       }
     }
   }
-
+  /**
+   * @param i
+   */
   public void sellInControl(int i) {
     if (items[i].sellIn < 0) {
       items[i].sellIn = 0;
       downQuality(i);
     }
   }
-
+  /**
+   * @param i
+   */
   public void downQuality(int i) {
     items[i].quality = (items[i].quality) / 2;
   }
-
+  /**
+   * @param i
+   */
   public void updateSellInofObject(int i) {
     if (!items[i].name.equals(sulfuras)) {
       items[i].sellIn = (items[i].sellIn) - 1;
       sellInControl(i);
     }
   }
+  /**
+   * @param i
+   */
 
   public void upQualityofRandomObject(int i) {
     if (!items[i].name.equals(sulfuras)) {
@@ -55,13 +72,17 @@ class GildedRose {
       }
     }
   }
-
+  /**
+   * @param i
+   */
   public void upQualityofAgedBrieObject(int i) {
     if (items[i].sellIn > 0) {
       items[i].quality = (items[i].quality) + 1;
     }
   }
-
+  /**
+   * @param i
+   */
   public void qualityofBACKObject(int i) {
     if (items[i].sellIn > tenDaysOrBelow) {
       items[i].quality = (items[i].quality) + 1;
