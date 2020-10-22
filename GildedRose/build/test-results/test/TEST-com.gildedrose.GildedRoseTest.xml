@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.gildedrose.GildedRoseTest" tests="56" skipped="0" failures="0" errors="0" timestamp="2020-09-28T15:24:12" hostname="MacBook-Air-de-Romain.local" time="0.135">
+  <properties/>
+  <testcase name="qualityPositiveOfAgedBrienameSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.027"/>
+  <testcase name="nameRandomQualityNegativeSINeg()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="nameRandomQualityNegativeSIPos()" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
+  <testcase name="qualityPositiveOfAgedBrienameSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SIPositiveNameAgedBrieQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="NameSulfurasQualityNegativeSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SIPositiveNameAgedBrieQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="NameSulfurasQualityNegativeSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="NameSulfurasQualityPositiveSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="NamerandomQualityNegativeSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="NameSulfurasQualityPositiveSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SIPositiveNameAgedBrieQualityPositive2Lim50()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="NamerandomQualityNegativeSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SIPositiveNamerandomQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SINegativeNameAgedBrieQualityPositive2Lim50()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="NamerandomQualityPositiveSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
+  <testcase name="SINegativeNameSulfurasQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SIPositiveNamerandomQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="NamerandomQualityPositiveSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SINegativeNameSulfurasQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="qualityNegativeOfBackstagepassestoaTAFKAL80ETCconcertnameSI6to10()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="qualityPositiveOfBackstagepassestoaTAFKAL80ETCconcertnameSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="NameBackstageQualityNegativeSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SIPositiveNameBackstageQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SIPositiveNameBackstageQualityPositive2Lim50()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="qualityPositiveOfBackstagepassestoaTAFKAL80ETCconcertnameSI6to10()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="NameBackstageQualityNegativeSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SIPositiveNameBackstageQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="NameBackstageQualityPositiveSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="qualityNegativeOfBackstagepassestoaTAFKAL80ETCconcertnameSIaboveAndEgalto11()" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
+  <testcase name="SINegativeNameBackstageQualityPositive2Lim50()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="NameBackstageQualityPositiveSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="nameSulfurasQualityNegativeSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="nameSulfurasQualityNegativeSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SIPositiveNameSulfurasQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="nameSulfurasQualityPositiveSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SIPositiveNameSulfurasQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="qualityNegativeOfBackstagepassestoaTAFKAL80ETCconcertnameSI1to5()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="nameSulfurasQualityPositiveSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="NameAgedBrieQualityNegativeSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SINegativeNameBackstageQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="NameAgedBrieQualityNegativeSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SINegativeNameAgedBrieQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="qualityPositiveOfBackstagepassestoaTAFKAL80ETCconcertnameSIaboveAndEgalto11()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="NameAgedBrieQualityPositiveSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SINegativeNameBackstageQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SINegativeNameAgedBrieQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="NameAgedBrieQualityPositiveSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="qualityNegativeOfAgedBrienameSIPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="nameRandomQualityPositiveSINeg()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="nameRandomQualityPositiveSIPos()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="qualityNegativeOfAgedBrienameSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="qualityPositiveOfBackstagepassestoaTAFKAL80ETCconcertnameSI1to5()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="qualityNegativeOfBackstagepassestoaTAFKAL80ETCconcertnameSINegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="SINegativeNamerandomQualityPositive()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="SINegativeNamerandomQualityNegative()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
