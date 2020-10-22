@@ -1,4 +1,9 @@
 package com.gildedrose;
+import java.util.Locale;
+/**
+ * @author ALI Irachi REMY Romain
+ * @version 1.0
+ */
 
 class GildedRose 
 {
