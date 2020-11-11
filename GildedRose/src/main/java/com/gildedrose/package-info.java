@@ -13,4 +13,8 @@
  *    @author ALI Irachi Romain REMY
  *    @version 1.0
  */
+<<<<<<< HEAD
 package com.gildedrose;
+=======
+package com.gildedrose;
+>>>>>>> hacherixe

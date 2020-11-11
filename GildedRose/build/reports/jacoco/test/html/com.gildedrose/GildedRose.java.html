@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GildedRose.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">GildedRose</a> &gt; <a href="index.source.html" class="el_package">com.gildedrose</a> &gt; <span class="el_source">GildedRose.java</span></div><h1>GildedRose.java</h1><pre class="source lang-java linenums">package com.gildedrose;
+<<<<<<< HEAD
 
 class GildedRose 
 {
@@ -81,5 +82,130 @@ class GildedRose
             }
         }
 <span class="fc" id="L83">    }</span>
+=======
+import java.util.Locale;
+/**
+ * @author ALI Irachi REMY Romain
+ * @version 1.0
+ */
+
+class GildedRose {
+  static int MINQUALITY;
+<span class="fc" id="L10">  static int MAXQUALITY = 50;</span>
+<span class="fc" id="L11">  static String sulfuras = &quot;Sulfuras, Hand of Ragnaros&quot;;</span>
+<span class="fc" id="L12">  static int tenDaysOrBelow = 10;</span>
+  Item[] items;
+<span class="fc" id="L14">  GildedRose(Item[] items) {</span>
+<span class="fc" id="L15">    this.items = items;</span>
+<span class="fc" id="L16">  }</span>
+
+  /**
+   * @param i
+   */
+  public void qualityControlRange(int i) {
+<span class="fc bfc" id="L22" title="All 2 branches covered.">    if (items[i].quality &lt; MINQUALITY) {</span>
+<span class="fc" id="L23">      items[i].quality = MINQUALITY;</span>
+    }
+<span class="fc bfc" id="L25" title="All 2 branches covered.">    if (!items[i].name.equals(sulfuras)) {</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">      if (items[i].quality &gt; MAXQUALITY) {</span>
+<span class="fc" id="L27">        items[i].quality = MAXQUALITY;</span>
+      }
+    }
+<span class="fc" id="L30">  }</span>
+  /**
+   * @param i
+   */
+  public void sellInControl(int i) {
+<span class="fc bfc" id="L35" title="All 2 branches covered.">    if (items[i].sellIn &lt; 0) {</span>
+<span class="fc" id="L36">      items[i].sellIn = 0;</span>
+    }
+<span class="fc" id="L38">  }</span>
+
+  /**
+   * @param i
+   */
+  public void updateSellInofObject(int i) {
+<span class="fc bfc" id="L44" title="All 2 branches covered.">    if (!items[i].name.equals(sulfuras)) {</span>
+<span class="fc" id="L45">      items[i].sellIn = (items[i].sellIn) - 1;</span>
+<span class="fc" id="L46">      sellInControl(i);</span>
+    }
+<span class="fc" id="L48">  }</span>
+  /**
+   * @param i
+   */
+
+  public void downQuality(int i) {
+<span class="fc bfc" id="L54" title="All 2 branches covered.">    if (items[i].sellIn &gt; 0) {</span>
+<span class="fc" id="L55">      items[i].quality = (items[i].quality) - 1;</span>
+    } else {
+<span class="fc" id="L57">      items[i].quality = (items[i].quality) - 2;</span>
+    }
+<span class="fc" id="L59">  }</span>
+  /**
+   * @param i
+   */
+  public void upQuality(int i) {
+<span class="fc" id="L64">    items[i].quality = (items[i].quality) + 1;</span>
+<span class="fc" id="L65">  }</span>
+  /**
+   * @param i
+   */
+  public void qualityofBACKObject(int i) {
+<span class="fc bfc" id="L70" title="All 2 branches covered.">    if (items[i].sellIn &gt; tenDaysOrBelow) {</span>
+<span class="fc" id="L71">      items[i].quality = (items[i].quality) + 1;</span>
+    }
+<span class="fc bfc" id="L73" title="All 4 branches covered.">    if (items[i].sellIn &gt;= 6 &amp;&amp; items[i].sellIn &lt;= tenDaysOrBelow) {</span>
+<span class="fc" id="L74">      items[i].quality = (items[i].quality) + 2;</span>
+    }
+<span class="fc bfc" id="L76" title="All 4 branches covered.">    if (items[i].sellIn &gt;= 1 &amp;&amp; items[i].sellIn &lt;= 5) {</span>
+<span class="fc" id="L77">      items[i].quality = (items[i].quality) + 3;</span>
+    }
+<span class="fc bfc" id="L79" title="All 2 branches covered.">    if (items[i].sellIn &lt;= 0) {</span>
+<span class="fc" id="L80">      items[i].quality = 0;</span>
+    }
+<span class="fc" id="L82">  }</span>
+  /**
+   * @param i
+   */
+  void qualityOfConjuredObject(int i) {
+<span class="fc" id="L87">    downQuality(i);</span>
+<span class="fc" id="L88">    downQuality(i);</span>
+<span class="fc" id="L89">  }</span>
+
+  /**
+   * @param i
+   */
+  void qualityOfAgedBrieObject(int i) {
+<span class="fc bfc" id="L95" title="All 2 branches covered.">    if (items[i].sellIn &gt; 0) {</span>
+<span class="fc" id="L96">      upQuality(i);</span>
+    } else {
+<span class="fc" id="L98">      downQuality(i);</span>
+    }
+<span class="fc" id="L100">  }</span>
+
+  public void updateQuality() {
+<span class="fc bfc" id="L103" title="All 2 branches covered.">    for (int i = 0; i &lt; items.length; i++) {</span>
+<span class="fc bfc" id="L104" title="All 4 branches covered.">      switch (items[i].name) {</span>
+        case &quot;Aged Brie&quot;:
+<span class="fc" id="L106">          qualityOfAgedBrieObject(i);</span>
+<span class="fc" id="L107">          break;</span>
+        case &quot;Backstage passes to a TAFKAL80ETC concert&quot;:
+<span class="fc" id="L109">          qualityofBACKObject(i);</span>
+<span class="fc" id="L110">          break;</span>
+        case &quot;Sulfuras, Hand of Ragnaros&quot;:
+<span class="fc" id="L112">          break;</span>
+        default:
+<span class="fc bfc" id="L114" title="All 2 branches covered.">          if (items[i].name.toLowerCase(Locale.FRANCE).contains(&quot;conjured&quot;)) {</span>
+<span class="fc" id="L115">            qualityOfConjuredObject(i);</span>
+          } else {
+<span class="fc" id="L117">            downQuality(i);</span>
+            break;
+          }
+      }
+<span class="fc" id="L121">      updateSellInofObject(i);</span>
+<span class="fc" id="L122">      qualityControlRange(i);</span>
+    }
+<span class="fc" id="L124">  }</span>
+>>>>>>> hacherixe
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
