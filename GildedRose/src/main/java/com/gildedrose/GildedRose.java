@@ -6,9 +6,9 @@ import java.util.Locale;
  */
 
 class GildedRose {
-  static int MINQUALITY;
-  static int MAXQUALITY = 50;
-  static String sulfuras = "Sulfuras, Hand of Ragnaros";
+  static final int MINQUALITY = 0;
+  static final int MAXQUALITY = 50;
+  static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
   static int tenDaysOrBelow = 10;
   Item[] items;
   GildedRose(Item[] items) {
@@ -22,7 +22,7 @@ class GildedRose {
     if (items[i].quality < MINQUALITY) {
       items[i].quality = MINQUALITY;
     }
-    if (!items[i].name.equals(sulfuras)) {
+    if (!items[i].name.equals(SULFURAS)) {
       if (items[i].quality > MAXQUALITY) {
         items[i].quality = MAXQUALITY;
       }
@@ -41,7 +41,7 @@ class GildedRose {
    * @param i
    */
   public void updateSellInofObject(int i) {
-    if (!items[i].name.equals(sulfuras)) {
+    if (!items[i].name.equals(SULFURAS)) {
       items[i].sellIn = (items[i].sellIn) - 1;
       sellInControl(i);
     }
@@ -51,21 +51,17 @@ class GildedRose {
    */
 
   public void downQuality(int i) {
-    if (!items[i].name.equals(sulfuras)) {
-      if (items[i].sellIn > 0) {
-        items[i].quality = (items[i].quality) - 1;
-      } else {
-        items[i].quality = (items[i].quality) - 2;
-      }
+    if (items[i].sellIn > 0) {
+      items[i].quality = (items[i].quality) - 1;
+    } else {
+      items[i].quality = (items[i].quality) - 2;
     }
   }
   /**
    * @param i
    */
   public void upQuality(int i) {
-    if (items[i].sellIn > 0) {
-      items[i].quality = (items[i].quality) + 1;
-    }
+    items[i].quality = (items[i].quality) + 1;
   }
   /**
    * @param i
@@ -112,7 +108,7 @@ class GildedRose {
         case "Backstage passes to a TAFKAL80ETC concert":
           qualityofBACKObject(i);
           break;
-        case "Sulfuras, Hand of Ragnaros":
+        case SULFURAS:
           break;
         default:
           if (items[i].name.toLowerCase(Locale.FRANCE).contains("conjured")) {

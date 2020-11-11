@@ -51,80 +51,76 @@ class GildedRose {
    */
 
   public void downQuality(int i) {
-<span class="pc bpc" id="L54" title="1 of 2 branches missed.">    if (!items[i].name.equals(sulfuras)) {</span>
-<span class="fc bfc" id="L55" title="All 2 branches covered.">      if (items[i].sellIn &gt; 0) {</span>
-<span class="fc" id="L56">        items[i].quality = (items[i].quality) - 1;</span>
-      } else {
-<span class="fc" id="L58">        items[i].quality = (items[i].quality) - 2;</span>
-      }
+<span class="fc bfc" id="L54" title="All 2 branches covered.">    if (items[i].sellIn &gt; 0) {</span>
+<span class="fc" id="L55">      items[i].quality = (items[i].quality) - 1;</span>
+    } else {
+<span class="fc" id="L57">      items[i].quality = (items[i].quality) - 2;</span>
     }
-<span class="fc" id="L61">  }</span>
+<span class="fc" id="L59">  }</span>
   /**
    * @param i
    */
   public void upQuality(int i) {
-<span class="pc bpc" id="L66" title="1 of 2 branches missed.">    if (items[i].sellIn &gt; 0) {</span>
-<span class="fc" id="L67">      items[i].quality = (items[i].quality) + 1;</span>
-    }
-<span class="fc" id="L69">  }</span>
+<span class="fc" id="L64">    items[i].quality = (items[i].quality) + 1;</span>
+<span class="fc" id="L65">  }</span>
   /**
    * @param i
    */
   public void qualityofBACKObject(int i) {
-<span class="fc bfc" id="L74" title="All 2 branches covered.">    if (items[i].sellIn &gt; tenDaysOrBelow) {</span>
-<span class="fc" id="L75">      items[i].quality = (items[i].quality) + 1;</span>
+<span class="fc bfc" id="L70" title="All 2 branches covered.">    if (items[i].sellIn &gt; tenDaysOrBelow) {</span>
+<span class="fc" id="L71">      items[i].quality = (items[i].quality) + 1;</span>
     }
-<span class="fc bfc" id="L77" title="All 4 branches covered.">    if (items[i].sellIn &gt;= 6 &amp;&amp; items[i].sellIn &lt;= tenDaysOrBelow) {</span>
-<span class="fc" id="L78">      items[i].quality = (items[i].quality) + 2;</span>
+<span class="fc bfc" id="L73" title="All 4 branches covered.">    if (items[i].sellIn &gt;= 6 &amp;&amp; items[i].sellIn &lt;= tenDaysOrBelow) {</span>
+<span class="fc" id="L74">      items[i].quality = (items[i].quality) + 2;</span>
     }
-<span class="fc bfc" id="L80" title="All 4 branches covered.">    if (items[i].sellIn &gt;= 1 &amp;&amp; items[i].sellIn &lt;= 5) {</span>
-<span class="fc" id="L81">      items[i].quality = (items[i].quality) + 3;</span>
+<span class="fc bfc" id="L76" title="All 4 branches covered.">    if (items[i].sellIn &gt;= 1 &amp;&amp; items[i].sellIn &lt;= 5) {</span>
+<span class="fc" id="L77">      items[i].quality = (items[i].quality) + 3;</span>
     }
-<span class="fc bfc" id="L83" title="All 2 branches covered.">    if (items[i].sellIn &lt;= 0) {</span>
-<span class="fc" id="L84">      items[i].quality = 0;</span>
+<span class="fc bfc" id="L79" title="All 2 branches covered.">    if (items[i].sellIn &lt;= 0) {</span>
+<span class="fc" id="L80">      items[i].quality = 0;</span>
     }
-<span class="fc" id="L86">  }</span>
+<span class="fc" id="L82">  }</span>
   /**
    * @param i
    */
   void qualityOfConjuredObject(int i) {
-<span class="fc" id="L91">    downQuality(i);</span>
-<span class="fc" id="L92">    downQuality(i);</span>
-<span class="fc" id="L93">  }</span>
+<span class="fc" id="L87">    downQuality(i);</span>
+<span class="fc" id="L88">    downQuality(i);</span>
+<span class="fc" id="L89">  }</span>
 
   /**
    * @param i
    */
   void qualityOfAgedBrieObject(int i) {
-<span class="fc bfc" id="L99" title="All 2 branches covered.">    if (items[i].sellIn &gt; 0) {</span>
-<span class="fc" id="L100">      upQuality(i);</span>
+<span class="fc bfc" id="L95" title="All 2 branches covered.">    if (items[i].sellIn &gt; 0) {</span>
+<span class="fc" id="L96">      upQuality(i);</span>
     } else {
-<span class="fc" id="L102">      downQuality(i);</span>
+<span class="fc" id="L98">      downQuality(i);</span>
     }
-<span class="fc" id="L104">  }</span>
+<span class="fc" id="L100">  }</span>
 
   public void updateQuality() {
-<span class="fc bfc" id="L107" title="All 2 branches covered.">    for (int i = 0; i &lt; items.length; i++) {</span>
-<span class="fc bfc" id="L108" title="All 4 branches covered.">      switch (items[i].name) {</span>
+<span class="fc bfc" id="L103" title="All 2 branches covered.">    for (int i = 0; i &lt; items.length; i++) {</span>
+<span class="fc bfc" id="L104" title="All 4 branches covered.">      switch (items[i].name) {</span>
         case &quot;Aged Brie&quot;:
-<span class="fc" id="L110">          qualityOfAgedBrieObject(i);</span>
-<span class="fc" id="L111">          break;</span>
+<span class="fc" id="L106">          qualityOfAgedBrieObject(i);</span>
+<span class="fc" id="L107">          break;</span>
         case &quot;Backstage passes to a TAFKAL80ETC concert&quot;:
-<span class="fc" id="L113">          qualityofBACKObject(i);</span>
-<span class="fc" id="L114">          break;</span>
+<span class="fc" id="L109">          qualityofBACKObject(i);</span>
+<span class="fc" id="L110">          break;</span>
         case &quot;Sulfuras, Hand of Ragnaros&quot;:
-<span class="fc" id="L116">          break;</span>
+<span class="fc" id="L112">          break;</span>
         default:
-<span class="fc bfc" id="L118" title="All 2 branches covered.">          if (items[i].name.toLowerCase(Locale.FRANCE).contains(&quot;conjured&quot;)) {</span>
-<span class="fc" id="L119">            qualityOfConjuredObject(i);</span>
+<span class="fc bfc" id="L114" title="All 2 branches covered.">          if (items[i].name.toLowerCase(Locale.FRANCE).contains(&quot;conjured&quot;)) {</span>
+<span class="fc" id="L115">            qualityOfConjuredObject(i);</span>
           } else {
-<span class="fc" id="L121">            downQuality(i);</span>
+<span class="fc" id="L117">            downQuality(i);</span>
             break;
           }
       }
-<span class="fc" id="L125">      updateSellInofObject(i);</span>
-<span class="fc" id="L126">      qualityControlRange(i);</span>
+<span class="fc" id="L121">      updateSellInofObject(i);</span>
+<span class="fc" id="L122">      qualityControlRange(i);</span>
     }
-<span class="fc" id="L128">  }</span>
+<span class="fc" id="L124">  }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
