@@ -51,11 +51,10 @@ class GildedRose {
    */
 
   public void downQuality(int i) {
-    if (!items[i].name.equals(sulfuras)) {
+    if(!items[i].name.equals(sulfuras)){
       if(items[i].sellIn > 0){
         items[i].quality = (items[i].quality) - 1;
-      }
-      else{
+      } else {
         items[i].quality = (items[i].quality) - 2;
       }
     }
@@ -99,8 +98,7 @@ class GildedRose {
   void qualityOfAgedBrieObject(int i) {
     if (items[i].sellIn > 0) {
       upQuality(i);
-    }
-    else{
+    } else {
       downQuality(i);
     }
   }
