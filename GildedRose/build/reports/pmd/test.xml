@@ -2,7 +2,7 @@
 <pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
-    version="6.23.0" timestamp="2020-11-11T14:36:03.537">
+    version="6.23.0" timestamp="2020-11-11T14:52:42.435">
 <file name="/Users/romain/Desktop/Cours/M1/Génie logiciel avancé/TP/GLA/GildedRose/src/test/java/com/gildedrose/GildedRoseTest.java">
 <violation beginline="16" endline="16" begincolumn="46" endcolumn="56" rule="AvoidDuplicateLiterals" ruleset="Error Prone" package="com.gildedrose" class="GildedRoseTest" method="qualityPositiveOfAgedBrienameSIPositive" externalInfoUrl="https://pmd.github.io/pmd-6.23.0/pmd_rules_java_errorprone.html#avoidduplicateliterals" priority="3">
 The String literal &quot;Aged Brie&quot; appears 14 times in this file; the first occurrence is on line 16

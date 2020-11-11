@@ -51,8 +51,8 @@ class GildedRose {
    */
 
   public void downQuality(int i) {
-    if(!items[i].name.equals(sulfuras)){
-      if(items[i].sellIn > 0){
+    if (!items[i].name.equals(sulfuras)) {
+      if (items[i].sellIn > 0) {
         items[i].quality = (items[i].quality) - 1;
       } else {
         items[i].quality = (items[i].quality) - 2;
@@ -115,10 +115,10 @@ class GildedRose {
         case "Sulfuras, Hand of Ragnaros":
           break;
         default:
-            if (items[i].name.toLowerCase(Locale.FRANCE).contains("conjured")) {
-              qualityOfConjuredObject(i);
-            } else {
-              downQuality(i);
+          if (items[i].name.toLowerCase(Locale.FRANCE).contains("conjured")) {
+            qualityOfConjuredObject(i);
+          } else {
+            downQuality(i);
             break;
           }
       }
